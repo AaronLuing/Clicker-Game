@@ -10,8 +10,10 @@
 </head>
 <body>
   <h1>LawnMower Man</h1>
-  <button type="button" onclick="mow()">Mow a Lawn</button>
-  <button id="upgrade" type="button" onclick="upgrade()">Upgrade Tool ($5)</button>
+  <div id="buttons">
+    <button type="button" class="interface" onclick="mow()">Mow a Lawn</button>
+    <button id="upgrade" class="interface" type="button" onclick="upgrade()">Upgrade Tool ($5)</button>
+  </div>
   <ul>
     <li id="money">Money: $0</li>
     <li id="tool">Tool: Teeth</li>

@@ -2,3 +2,10 @@ h1 {
   text-align: center;
   color: green
 }
+#buttons{
+  display: flex;
+  justify-content: space-evenly;
+}
+/* .interface {
+  border-radius: 50px;
+} */
