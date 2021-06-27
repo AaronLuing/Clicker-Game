@@ -7,14 +7,31 @@ function mow() {
   document.getElementById("money").innerHTML = "Money: " + money
 }
 
+// function winner() {}
+
 function upgrade() {
   if (money >= 5 && tool == "Teeth") {
-    money - 5
+    money -= 5
     power += 4
     tool = "Rusty Scissors"
     document.getElementById("tool").innerHTML = "Tool: " + tool
+    document.getElementById("money").innerHTML = "Money: " + money
+    document.getElementById("upgrade").innerHTML = "Upgrade Tool: $25"
+  } else if (money >= 25 && tool == "Rusty Scissors") {
+    money -= 25
+    power += 5
+    tool = "Old Timey Mower"
+    document.getElementById("tool").innerHTML = "Tool: " + tool
+    document.getElementById("money").innerHTML = "Money: " + money
+    document.getElementById("upgrade").innerHTML = "Upgrade Tool: $50"
+  } else if (money >= 50 && tool == "Old Timey Mower") {
+    money -= 50
+    power += 15
+    tool = "Battery-Powered Motor"
+    document.getElementById("tool").innerHTML = "Tool: " + tool
+    document.getElementById("money").innerHTML = "Money: " + money
     document.getElementById("upgrade").innerHTML = "SOLD OUT"
-  } else if (tool == "Rusty Scissors") {
+  } else if (tool == "Battery-Powered Motor") {
     alert("You bought everything!")
   } else {
     alert("You are too poor!")
