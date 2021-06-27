@@ -6,7 +6,7 @@ let victory = "You have bought all the upgrades!  There is nothing left to do bu
 
 function mow() {
   money += power;
-  document.getElementById("money").innerHTML = "Money: " + money
+  document.getElementById("money").innerHTML = "Money: $" + money
 }
 
 function winner() {
@@ -23,7 +23,7 @@ function upgrade() {
     power += 4
     tool = "Rusty Scissors"
     document.getElementById("tool").innerHTML = "Tool: " + tool
-    document.getElementById("money").innerHTML = "Money: " + money
+    document.getElementById("money").innerHTML = "Money: $" + money
     document.getElementById("upgrade").innerHTML = "Upgrade Tool: $25"
     winner()
   } else if (money >= 25 && tool == "Rusty Scissors") {
@@ -31,7 +31,7 @@ function upgrade() {
     power += 5
     tool = "Old Timey Mower"
     document.getElementById("tool").innerHTML = "Tool: " + tool
-    document.getElementById("money").innerHTML = "Money: " + money
+    document.getElementById("money").innerHTML = "Money: $" + money
     document.getElementById("upgrade").innerHTML = "Upgrade Tool: $50"
     winner()
   } else if (money >= 50 && tool == "Old Timey Mower") {
@@ -40,7 +40,7 @@ function upgrade() {
     tool = "Battery-Powered Motor"
     sold += 1
     document.getElementById("tool").innerHTML = "Tool: " + tool
-    document.getElementById("money").innerHTML = "Money: " + money
+    document.getElementById("money").innerHTML = "Money: $" + money
     document.getElementById("upgrade").innerHTML = ""
     winner()
   } else if (tool == "Battery-Powered Motor") {
