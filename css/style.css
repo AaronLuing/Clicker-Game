@@ -6,6 +6,10 @@ h1 {
   display: flex;
   justify-content: space-evenly;
 }
+.mowerpic {
+  display: flex;
+  justify-content: center;
+}
 /* .interface {
   border-radius: 50px;
 } */
