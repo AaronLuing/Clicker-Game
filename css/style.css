@@ -15,6 +15,10 @@ h1 {
   -webkit-animation: action 1s infinite  alternate;
   animation: action 1s infinite  alternate;
 }
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
 /* .interface {
   border-radius: 50px;
 } */
