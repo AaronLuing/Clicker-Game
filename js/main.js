@@ -4,6 +4,7 @@ let power = 1;
 let tool = "Teeth";
 let sold = 0;
 let victory = "You have bought all the upgrades!  There is nothing left to do but mow and collect cash.  Congratulations!"
+// const button2 = document.getElementById("upgrade");
 // I set a function that will increase the money variable based on the current set power.
 // the function also updates the html to display the current variable value
 function mow() {
@@ -17,6 +18,10 @@ function winner() {
   } else {
     return
   }
+}
+function soldOut() {
+  const button2 = document.getElementById("upgrade");
+  button2.remove()
 }
 // This function will upgrade the tool & power accordingly based upon current money.
 // Each Else-If adds another step in the upgrade chain, until the hardcoded SOLD OUT is achieved
@@ -45,7 +50,9 @@ function upgrade() {
     sold += 1
     document.getElementById("tool").innerHTML = "Tool: " + tool
     document.getElementById("money").innerHTML = "Money: $" + money
-    document.getElementById("upgrade").innerHTML = ""
+    soldOut()
+    // button2.remove()
+    // document.getElementById("upgrade").innerHTML = ""
     winner()
   } else if (tool == "Battery-Powered Motor") {
     alert("You bought everything!")
