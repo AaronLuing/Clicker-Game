@@ -4,14 +4,13 @@ let power = 1;
 let tool = "Teeth";
 let sold = 0;
 let victory = "You have bought all the upgrades!  There is nothing left to do but mow and collect cash.  Congratulations!"
-// const button2 = document.getElementById("upgrade");
 // I set a function that will increase the money variable based on the current set power.
-// the function also updates the html to display the current variable value
+// This function also updates the html to display the current variable value
 function mow() {
   money += power;
   document.getElementById("money").innerHTML = "Money: $" + money
 }
-// this function checks the sold variable to determine if victory is achieved
+// the following function checks the sold variable to determine if victory is achieved
 function winner() {
   if (sold == 1) {
     alert(victory)
@@ -19,6 +18,7 @@ function winner() {
     return
   }
 }
+// This function, when run, will remove the selected html element (the upgrade button) from the DOM.
 function soldOut() {
   const button2 = document.getElementById("upgrade");
   button2.remove()
@@ -51,8 +51,6 @@ function upgrade() {
     document.getElementById("tool").innerHTML = "Tool: " + tool
     document.getElementById("money").innerHTML = "Money: $" + money
     soldOut()
-    // button2.remove()
-    // document.getElementById("upgrade").innerHTML = ""
     winner()
   } else if (tool == "Battery-Powered Motor") {
     alert("You bought everything!")
