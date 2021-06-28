@@ -25,7 +25,6 @@ function soldOut() {
 }
 // This function will upgrade the tool & power accordingly based upon current money.
 // Each Else-If adds another step in the upgrade chain, until the hardcoded SOLD OUT is achieved
-// The blank upgrade innerHTML on line 48 essentially hides the upgrade button upon ending the tree
 function upgrade() {
   if (money >= 5 && tool == "Teeth") {
     money -= 5
